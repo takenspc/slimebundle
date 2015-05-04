@@ -4,4 +4,5 @@ node_js:
     "0.12"
 
 before_install:
-    - npm run build
+    - npm install
+    - node_modules/.bin/gulp
