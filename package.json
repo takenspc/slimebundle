@@ -1,0 +1,20 @@
+{
+    "name": "slimebundle",
+    "description": "Download and save same origin resources of the given web page using SlimerJS <http://www.slimerjs.org/>",
+    "version": "0.0.0",
+    "author": "Takeshi Kurosawa <taken.spc@gmail.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "gulp": "~3.8",
+        "gulp-concat": "~2.5",
+        "eslint": "~0.20"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/takenspc/slimebundle.git"
+    },
+    "scripts": {
+        "build": "gulp",
+        "test": "eslint ."
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true
+    },
+
+    "globals": {
+        "require": false,
+        "phantom": false,
+        "console": false,
+        "gulp": false,
+        "URL": false,
+        "Util": true,
+        "TSVLogger": false,
+        "PageRenderer": false,
+        "ResourceErrorHandler": false,
+        "SameOriginResourcesSaver": false
+    },
+
+    "rules": {
+        "no-console": [0],
+        "no-unused-vars": [0]
+    }
+}
