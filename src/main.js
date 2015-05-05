@@ -24,7 +24,7 @@ var Saver = require("./sameoriginresourcesaver.js");
         .option("-e, --height <n>", "The height of the viewport", parseInt)
         .option("-t, --timeout <n>", "The timeout (ms)", parseInt)
         .option("-s, --skip-overwrite", "Specify if you want to skip over writing pre-downloaded files.")
-        .option("-c, --capture-content <regexp,regexp,..>", "The array of regexp matching content types of resources for which you want to retrieve the content. <http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent>",list, [".+"])
+        .option("-c, --capture-content <regexp,regexp,..>", "The array of regexp matching content types of resources for which you want to retrieve the content. <http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent>", list, [".+"])
         .option("--skip-saving", "Specify if you want to skip saving resources.")
         .option("--skip-error-resources", "Specify if you want to skip logging error resources.")
         .option("--skip-screenshot", "Specify if you want to skip capturing screenshot.")
@@ -42,7 +42,7 @@ page.settings.resourceTimeout = program.timeout;
 // Logging Error Resources
 var logger = new Logger();
 if (!program.skipErrorResources) {
-    new Handler(page, logger, {});
+    var handler = new Handler(page, logger, {});
 }
 
 // Capturing screen shots
@@ -65,7 +65,9 @@ if (!program.skipSaving) {
 page.open(program.url, function(status) {
     if (status === "success") {
         setTimeout(function() {
-            renderer && renderer.render();
+            if (renderer) {
+                renderer.render();
+            }
             phantom.exit();
         }, 200);
     } else {
