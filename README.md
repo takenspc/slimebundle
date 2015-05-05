@@ -4,7 +4,7 @@ A tiny script that downloads same origin resources of the given web page using [
 
 ## Features
 
-- Download same origin resources (images, stylesheets, scripts and so on) of the page
+- Download same origin resources (images, style sheets, scripts and so on) of the page
 - Capture screenshot of the page
 - Print information of error resources (ex. 404) of the page
 
@@ -30,29 +30,32 @@ slimerjs slimebundle.js \
     --skip-screenshot
 ```
 
-\-u or --url <string>
-:   The URL of the page.
-
-\-i or --width <n>
-:   The width of the viewport.
-
-\-e or --height <n>
-:   The height of the viewport.
-
-\-t, --timeout <n>
-:   The timeout (ms). The default is 5000.
-
-\-s, --skip-overwrite
-:   Specify if you want to avoid overwriting previously downloaded files.
-
-\-c, --capture-content <regexp,regexp,..>
-:   The comman separated regexps matching content types of resources for which you want to retrieve the content. The default is ".+". [See more details](http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent).
-
-\--skip-saving
-:    Specify if you want to skip saving resources.
-
-\--skip-error-resources
-:    Specify if you want to skip logging error resources.
-
-\--skip-screenshot
-:    Specify if you want to skip capturing screenshot.
+<dl>
+<dt>-u or --url &lt;string&gt;</dt>
+<dd>The URL of the page.
+</dd>
+<dt>-i or --width &lt;n&gt;</dt>
+<dd>The width of the viewport.
+</dd>
+<dt>-e or --height &lt;n&gt;</dt>
+<dd>The height of the viewport.
+</dd>
+<dt>-t, --timeout &lt;n&gt;</dt>
+<dd>The timeout (ms). The default is 5000.
+</dd>
+<dt>-s, --skip-overwrite</dt>
+<dd>Specify if you want to avoid overwriting previously downloaded files.
+</dd>
+<dt>-c, --capture-content &lt;regexp,regexp,..&gt;</dt>
+<dd>The comma separated regexps matching content types of resources for which you want to retrieve the content. The default is &quot;.+&quot;.[See more details](http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent).
+</dd>
+<dt>--skip-saving</dt>
+<dd>Specify if you want to skip saving resources.
+</dd>
+<dt>--skip-error-resources</dt>
+<dd>Specify if you want to skip logging error resources.
+</dd>
+<dt>--skip-screenshot</dt>
+<dd>Specify if you want to skip capturing screenshot.
+</dd>
+</dl>
