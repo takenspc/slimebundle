@@ -32,30 +32,22 @@ slimerjs slimebundle.js \
 
 <dl>
 <dt>-u or --url &lt;string&gt;</dt>
-<dd>The URL of the page.
-</dd>
+<dd>The URL of the page.</dd>
 <dt>-i or --width &lt;n&gt;</dt>
-<dd>The width of the viewport.
-</dd>
+<dd>The width of the viewport.</dd>
 <dt>-e or --height &lt;n&gt;</dt>
-<dd>The height of the viewport.
-</dd>
+<dd>The height of the viewport.</dd>
 <dt>-t, --timeout &lt;n&gt;</dt>
-<dd>The timeout (ms). The default is 5000.
-</dd>
+<dd>The timeout (ms). The default is 5000.</dd>
 <dt>-s, --skip-overwrite</dt>
-<dd>Specify if you want to avoid overwriting previously downloaded files.
-</dd>
+<dd>Specify if you want to avoid overwriting previously downloaded files.</dd>
 <dt>-c, --capture-content &lt;regexp,regexp,..&gt;</dt>
-<dd>The comma separated regexps matching content types of resources for which you want to retrieve the content. The default is &quot;.+&quot;.[See more details](http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent).
+<dd>The comma separated regexps matching content types of resources for which you want to retrieve the content. The default is &quot;.+&quot;. <a href="http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent">See more details</a>.
 </dd>
 <dt>--skip-saving</dt>
-<dd>Specify if you want to skip saving resources.
-</dd>
+<dd>Specify if you want to skip saving same origin resources.</dd>
 <dt>--skip-error-resources</dt>
-<dd>Specify if you want to skip logging error resources.
-</dd>
+<dd>Specify if you want to skip logging error resources.</dd>
 <dt>--skip-screenshot</dt>
-<dd>Specify if you want to skip capturing screenshot.
-</dd>
+<dd>Specify if you want to skip capturing screenshot.</dd>
 </dl>
