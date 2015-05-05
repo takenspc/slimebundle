@@ -1,20 +1,20 @@
 "use strict";
+var browserify = require("browserify");
 var gulp = require("gulp");
-var concat = require("gulp-concat");
+var source = require("vinyl-source-stream");
 
-var scripts = [
-    "src/util.js",
-    "src/tsvlogger.js",
-    "src/pagerenderer.js",
-    "src/resourceerrorhandler.js",
-    "src/sameoriginresourcesaver.js",
-    "src/main.js"
-];
+gulp.task("scripts", function() {
+    var b = browserify({
+        entries: "./src/main.js",
+        debug: true
+    });
+    b.exclude("fs");
+    b.exclude("system");
+    b.exclude("webpage");
 
-gulp.task("concat-scripts", function() {
-    return gulp.src(scripts)
-        .pipe(concat("slimebundle.js"))
-        .pipe(gulp.dest("."));
+    return b.bundle()
+        .pipe(source("slimebundle.js"))
+        .pipe(gulp.dest("./"));
 });
 
-gulp.task("default", ["concat-scripts"]);
+gulp.task("default", ["scripts"]);

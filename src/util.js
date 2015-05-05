@@ -1,9 +1,9 @@
 /*
  * Utility methods on Path and URL
  */
+var fs = require("fs");
 var Util = (function() {
     "use strict";
-    var fs = require("fs");
     return {
         compareOrigin: function (url1, url2) {
             return this.getOrigin(url1) === this.getOrigin(url2);
@@ -55,3 +55,5 @@ var Util = (function() {
         }
     };
 })();
+
+module.exports = Util;

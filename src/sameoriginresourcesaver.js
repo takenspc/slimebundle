@@ -1,6 +1,8 @@
 /*
  * Saving resources
  */
+var Util = require("./util.js");
+
 function SameOriginResourcesSaver(page, logger, options) {
     "use strict";
     this.page = page;
@@ -49,3 +51,5 @@ SameOriginResourcesSaver.prototype = (function() {
         }
     };
 })();
+
+module.exports = SameOriginResourcesSaver;

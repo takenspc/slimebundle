@@ -1,12 +1,11 @@
 {
     "env": {
-        "browser": true
+        "browser": true,
+        "node": true
     },
 
     "globals": {
-        "require": false,
         "phantom": false,
-        "console": false,
         "gulp": false,
         "URL": false,
         "Util": true,

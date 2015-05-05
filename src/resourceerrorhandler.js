@@ -26,3 +26,5 @@ ResourceErrorHandler.prototype = (function() {
         }
     };
 })();
+
+module.exports = ResourceErrorHandler;

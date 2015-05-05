@@ -20,3 +20,5 @@ TSVLogger.prototype = (function() {
         }
     };
 })();
+
+module.exports = TSVLogger;

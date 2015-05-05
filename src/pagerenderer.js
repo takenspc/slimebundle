@@ -1,6 +1,8 @@
 /*
  * Capture a screenshot of a page
  */
+var Util = require("./util.js");
+
 function PageRenderer(page, logger, options) {
     "use strict";
     this.page = page;
@@ -26,3 +28,5 @@ PageRenderer.prototype = (function() {
         }
     };
 })();
+
+module.exports = PageRenderer;

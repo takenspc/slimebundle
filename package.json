@@ -5,9 +5,10 @@
     "author": "Takeshi Kurosawa <taken.spc@gmail.com>",
     "license": "MIT",
     "devDependencies": {
+        "browserify": "~10.1",
         "gulp": "~3.8",
-        "gulp-concat": "~2.5",
-        "eslint": "~0.20"
+        "eslint": "~0.20",
+        "vinyl-source-stream": "~1.1"
     },
     "repository": {
         "type": "git",
