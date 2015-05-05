@@ -33,6 +33,12 @@ SameOriginResourcesSaver.prototype = (function() {
                 if (!this.options.overwrite && Util.existsPath(path)) {
                     return;
                 }
+                // http://docs.slimerjs.org/0.9/api/webpage.html#webpage-onresourcereceived
+                // > Note about the ``body`` property: by default, the body property is filled only for the resource
+                // > that corresponds to the main html page. For other resources, it will be empty.
+                if (res.body.length === 0) {
+                    return;
+                }
                 // prepare chunk download
                 var id = res.id;
                 if (!this.resouces.hasOwnProperty(id)) {

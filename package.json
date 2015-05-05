@@ -1,13 +1,16 @@
 {
     "name": "slimebundle",
     "description": "Download and save same origin resources of the given web page using SlimerJS <http://www.slimerjs.org/>",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "author": "Takeshi Kurosawa <taken.spc@gmail.com>",
     "license": "MIT",
     "devDependencies": {
         "browserify": "~10.1",
-        "gulp": "~3.8",
+        "commander": "~2.8",
         "eslint": "~0.20",
+        "graceful-readlink": "~1.0",
+        "gulp": "~3.8",
+        "phantomjsify": "~0.1",
         "vinyl-source-stream": "~1.1"
     },
     "repository": {
