@@ -1,11 +1,12 @@
 "use strict";
 
+var system = require("system");
 var webpage = require("webpage");
-var program = require("../lib/commander.js");
-var Logger = require("./tsvlogger.js");
-var Renderer = require("./pagerenderer.js");
-var Handler = require("./resourceerrorhandler.js");
-var Saver = require("./sameoriginresourcesaver.js");
+var program = require("lib/commander.js");
+var Logger = require("./src/tsvlogger.js");
+var Renderer = require("./src/pagerenderer.js");
+var Handler = require("./src/resourceerrorhandler.js");
+var Saver = require("./src/sameoriginresourcesaver.js");
 
 // Commander
 (function() {
@@ -17,6 +18,7 @@ var Saver = require("./sameoriginresourcesaver.js");
         return val.split(",").map(toRegExp);
     }
 
+    var argv = [phantom.scriptName].concat(system.args);
     program
         .version("0.0.1")
         .option("-u, --url <string>", "The URL of the page.", String)
@@ -25,17 +27,17 @@ var Saver = require("./sameoriginresourcesaver.js");
         .option("-t, --timeout <n>", "The timeout (ms). The default is 5000.", parseInt)
         .option("-s, --skip-overwrite", "Specify if you want to avoid overwriting previously downloaded files.")
         .option("-c, --capture-content <regexp,regexp,..>", "The comma separated regexps matching content types of resources for which you want to retrieve the content. The default is \".+\". <http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent>", list, [/.+/])
-        .option("--skip-saving", "Specify if you want to skip saving resources.")
+        .option("--skip-saving", "Specify if you want to skip saving same origin resources.")
         .option("--skip-error-resources", "Specify if you want to skip logging error resources.")
         .option("--skip-screenshot", "Specify if you want to skip capturing screenshot.")
-        .parse(process.argv);
+        .parse(argv);
 })();
 
 // config
 var page = webpage.create();
 page.viewportSize = {
-    width: program.width || 640,
-    height: program.height || 480
+    width: program.width || 1024,
+    height: program.height || 768
 };
 page.settings.resourceTimeout = program.timeout;
 
