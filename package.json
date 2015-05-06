@@ -18,7 +18,6 @@
         "url": "http://github.com/takenspc/slimebundle.git"
     },
     "scripts": {
-        "build": "gulp",
         "test": "eslint ."
     }
 }

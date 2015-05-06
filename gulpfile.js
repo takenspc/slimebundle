@@ -4,7 +4,7 @@ var browserify = require("browserify");
 var gulp = require("gulp");
 var source = require("vinyl-source-stream");
 
-gulp.task("prepare-scripts", function() {
+gulp.task("update-commander", function() {
     var b = browserify({
         entries: "./node_modules/commander/index.js",
         standalone: "commander",
