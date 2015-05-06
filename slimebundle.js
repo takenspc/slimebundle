@@ -27,7 +27,7 @@ var Saver = require("./src/sameoriginresourcesaver.js");
         .option("-t, --timeout <n>", "The timeout (ms). The default is 5000.", parseInt)
         .option("-s, --skip-overwrite", "Specify if you want to avoid overwriting previously downloaded files.")
         .option("-c, --capture-content <regexp,regexp,..>", "The comma separated regexps matching content types of resources for which you want to retrieve the content. The default is \".+\". <http://docs.slimerjs.org/current/api/webpage.html#webpage-capturecontent>", list, [/.+/])
-        .option("--skip-saving", "Specify if you want to skip saving same origin resources.")
+        .option("--skip-saving", "Specify if you want to skip saving resources.")
         .option("--skip-error-resources", "Specify if you want to skip logging error resources.")
         .option("--skip-screenshot", "Specify if you want to skip capturing screenshot.")
         .parse(argv);
