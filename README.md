@@ -16,6 +16,14 @@ slimerjs slimebundle.js -u http://slimerjs.org/
 
 If you run the above commend, the resources will be downloaded at `./slimerjs.org/`.
 
+### Using npm
+
+```
+npm install
+npm run app -- -u http://slimerjs.org/
+```
+
+
 ## Options
 
 ```

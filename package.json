@@ -1,9 +1,17 @@
 {
     "name": "slimebundle",
+    "version": "0.0.2",
     "description": "Download and save same origin resources of the given web page using SlimerJS <http://www.slimerjs.org/>",
-    "version": "0.0.1",
+    "homepage": "https://github.com/takenspc/slimebundle/",
     "author": "Takeshi Kurosawa <taken.spc@gmail.com>",
     "license": "MIT",
+    "scripts": {
+        "app": "slimerjs slimebundle.js",
+        "test": "eslint ."
+    },
+    "dependencies": {
+        "slimerjs": "~0.9"
+    },
     "devDependencies": {
         "browserify": "~10.1",
         "commander": "~2.8",
@@ -17,7 +25,7 @@
         "type": "git",
         "url": "http://github.com/takenspc/slimebundle.git"
     },
-    "scripts": {
-        "test": "eslint ."
+    "engines": {
+        "npm": ">=2.0"
     }
 }
